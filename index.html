@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>환기 3차</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap">
+<style>
+:root {
+  --bg: #e6e7e9;
+  --fg: #26282c;
+  --muted: #6b6f76;
+  --paper-shadow: rgba(20, 24, 32, .14);
+  --font: "Noto Sans KR", -apple-system, "Apple SD Gothic Neo", sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #1b1c1f; --fg: #e8e9eb; --muted: #9a9ea6; --paper-shadow: rgba(0,0,0,.5); color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg); color: var(--fg); font-family: var(--font);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-top: calc(24px + env(safe-area-inset-top, 0px));
+  padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+}
+header {
+  max-width: 1400px; margin: 0 auto 20px;
+  display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+}
+h1 { font-size: 15px; font-weight: 700; margin: 0; }
+header span { font-size: 12px; color: var(--muted); letter-spacing: .04em; font-variant-numeric: tabular-nums; }
+main { max-width: 1400px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+.spread { display: grid; grid-template-columns: 1fr 1fr; box-shadow: 0 6px 28px var(--paper-shadow); }
+.spread img { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 612 / 859; background: #fff; }
+@media (max-width: 760px) {
+  main { gap: 16px; }
+  .spread { grid-template-columns: 1fr; gap: 16px; box-shadow: none; }
+  .spread img { box-shadow: 0 4px 18px var(--paper-shadow); }
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>환기: 책과 디자인과 여행, 샌프란시스코</h1>
+  <span id="count"></span>
+</header>
+<main id="pages"></main>
+
+<script>
+const PAGE_COUNT = 16;
+const main = document.getElementById('pages');
+document.getElementById('count').textContent = PAGE_COUNT + ' pages';
+for (let i = 1; i <= PAGE_COUNT; i += 2) {
+  const s = document.createElement('div');
+  s.className = 'spread';
+  for (const n of [i, i + 1]) {
+    if (n > PAGE_COUNT) break;
+    const img = document.createElement('img');
+    img.src = 'pages/p' + n + '.jpg';
+    img.alt = n + '쪽';
+    img.loading = n <= 4 ? 'eager' : 'lazy';
+    s.appendChild(img);
+  }
+  main.appendChild(s);
+}
+</script>
+</body>
+</html>
