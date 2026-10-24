@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>2026 KNU 30TH 무용학과 졸업작품발표회</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap">
+<style>
+:root {
+  --bg: #e6e7e9;
+  --fg: #26282c;
+  --paper: #ffffff;
+  --ink: #26282c;
+  --paper-shadow: rgba(20, 24, 32, .14);
+  --font: "Noto Sans KR", -apple-system, "Apple SD Gothic Neo", sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #1b1c1f; --fg: #e8e9eb; --paper-shadow: rgba(0,0,0,.5); color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg); color: var(--fg); font-family: var(--font);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-top: calc(24px + env(safe-area-inset-top, 0px));
+  padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+}
+main { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+.sheet {
+  width: 100%; max-width: 100%;
+  aspect-ratio: 210 / 297;
+  background: var(--paper); color: var(--ink);
+  box-shadow: 0 6px 28px var(--paper-shadow);
+  display: grid; place-items: center;
+  font-size: clamp(20px, 5vw, 32px); font-weight: 700; letter-spacing: .02em;
+}
+</style>
+</head>
+<body>
+<main>
+  <section class="sheet">팜플릿</section>
+  <section class="sheet">팜플릿</section>
+  <section class="sheet">팜플릿</section>
+  <section class="sheet">팜플릿</section>
+  <section class="sheet">팜플릿</section>
+</main>
+</body>
+</html>
