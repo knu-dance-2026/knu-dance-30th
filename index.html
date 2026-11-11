@@ -14,33 +14,34 @@ body {
   padding: calc(16px + env(safe-area-inset-top, 0px)) max(12px, env(safe-area-inset-right, 0px)) calc(48px + env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px));
 }
 main { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+@media (min-width: 960px) { main { max-width: 900px; gap: 20px; } body { padding-top: 32px; } }
 .page { display: block; width: 100%; height: auto; aspect-ratio: 1240 / 1759; background: #2a2b2f; box-shadow: 0 4px 20px rgba(0,0,0,.45); }
 </style>
 </head>
 <body>
 <main>
-  <img class="page" src="pages/01.jpg" alt="팸플릿 1페이지" width="1240" height="1759" loading="eager" decoding="async">
-  <img class="page" src="pages/03.jpg" alt="팸플릿 3페이지" width="1240" height="1759" loading="eager" decoding="async">
-  <img class="page" src="pages/04.jpg" alt="팸플릿 4페이지" width="1240" height="1759" loading="lazy" decoding="async">
-  <img class="page" src="pages/05.jpg" alt="팸플릿 5페이지" width="1240" height="1759" loading="lazy" decoding="async">
-  <img class="page" src="pages/06.jpg" alt="팸플릿 6페이지" width="1240" height="1759" loading="lazy" decoding="async">
-  <img class="page" src="pages/07.jpg" alt="팸플릿 7페이지" width="1240" height="1759" loading="lazy" decoding="async">
-  <img class="page" src="pages/08.jpg" alt="팸플릿 8페이지" width="1240" height="1759" loading="lazy" decoding="async">
-  <img class="page" src="pages/09.jpg" alt="팸플릿 9페이지" width="1240" height="1759" loading="lazy" decoding="async">
-  <img class="page" src="pages/10.jpg" alt="팸플릿 10페이지" width="1240" height="1759" loading="lazy" decoding="async">
-  <img class="page" src="pages/11.jpg" alt="팸플릿 11페이지" width="1240" height="1759" loading="lazy" decoding="async">
-  <img class="page" src="pages/12.jpg" alt="팸플릿 12페이지" width="1240" height="1759" loading="lazy" decoding="async">
-  <img class="page" src="pages/13.jpg" alt="팸플릿 13페이지" width="1240" height="1759" loading="lazy" decoding="async">
-  <img class="page" src="pages/14.jpg" alt="팸플릿 14페이지" width="1240" height="1759" loading="lazy" decoding="async">
-  <img class="page" src="pages/15.jpg" alt="팸플릿 15페이지" width="1240" height="1759" loading="lazy" decoding="async">
-  <img class="page" src="pages/16.jpg" alt="팸플릿 16페이지" width="1240" height="1759" loading="lazy" decoding="async">
-  <img class="page" src="pages/17.jpg" alt="팸플릿 17페이지" width="1240" height="1759" loading="lazy" decoding="async">
-  <img class="page" src="pages/18.jpg" alt="팸플릿 18페이지" width="1240" height="1759" loading="lazy" decoding="async">
-  <img class="page" src="pages/19.jpg" alt="팸플릿 19페이지" width="1240" height="1759" loading="lazy" decoding="async">
-  <img class="page" src="pages/20.jpg" alt="팸플릿 20페이지" width="1240" height="1759" loading="lazy" decoding="async">
-  <img class="page" src="pages/21.jpg" alt="팸플릿 21페이지" width="1240" height="1759" loading="lazy" decoding="async">
-  <img class="page" src="pages/22.jpg" alt="팸플릿 22페이지" width="1240" height="1759" loading="lazy" decoding="async">
-  <img class="page" src="pages/24.jpg" alt="팸플릿 24페이지" width="1240" height="1759" loading="lazy" decoding="async">
+  <img class="page" src="pages/01.jpg" srcset="pages/01.jpg 1240w, pages/hd/01.jpg 2400w" sizes="(min-width: 960px) 900px, 100vw" alt="팸플릿 1페이지" width="1240" height="1759" loading="eager" decoding="async">
+  <img class="page" src="pages/03.jpg" srcset="pages/03.jpg 1240w, pages/hd/03.jpg 2400w" sizes="(min-width: 960px) 900px, 100vw" alt="팸플릿 3페이지" width="1240" height="1759" loading="eager" decoding="async">
+  <img class="page" src="pages/04.jpg" srcset="pages/04.jpg 1240w, pages/hd/04.jpg 2400w" sizes="(min-width: 960px) 900px, 100vw" alt="팸플릿 4페이지" width="1240" height="1759" loading="lazy" decoding="async">
+  <img class="page" src="pages/05.jpg" srcset="pages/05.jpg 1240w, pages/hd/05.jpg 2400w" sizes="(min-width: 960px) 900px, 100vw" alt="팸플릿 5페이지" width="1240" height="1759" loading="lazy" decoding="async">
+  <img class="page" src="pages/06.jpg" srcset="pages/06.jpg 1240w, pages/hd/06.jpg 2400w" sizes="(min-width: 960px) 900px, 100vw" alt="팸플릿 6페이지" width="1240" height="1759" loading="lazy" decoding="async">
+  <img class="page" src="pages/07.jpg" srcset="pages/07.jpg 1240w, pages/hd/07.jpg 2400w" sizes="(min-width: 960px) 900px, 100vw" alt="팸플릿 7페이지" width="1240" height="1759" loading="lazy" decoding="async">
+  <img class="page" src="pages/08.jpg" srcset="pages/08.jpg 1240w, pages/hd/08.jpg 2400w" sizes="(min-width: 960px) 900px, 100vw" alt="팸플릿 8페이지" width="1240" height="1759" loading="lazy" decoding="async">
+  <img class="page" src="pages/09.jpg" srcset="pages/09.jpg 1240w, pages/hd/09.jpg 2400w" sizes="(min-width: 960px) 900px, 100vw" alt="팸플릿 9페이지" width="1240" height="1759" loading="lazy" decoding="async">
+  <img class="page" src="pages/10.jpg" srcset="pages/10.jpg 1240w, pages/hd/10.jpg 2400w" sizes="(min-width: 960px) 900px, 100vw" alt="팸플릿 10페이지" width="1240" height="1759" loading="lazy" decoding="async">
+  <img class="page" src="pages/11.jpg" srcset="pages/11.jpg 1240w, pages/hd/11.jpg 2400w" sizes="(min-width: 960px) 900px, 100vw" alt="팸플릿 11페이지" width="1240" height="1759" loading="lazy" decoding="async">
+  <img class="page" src="pages/12.jpg" srcset="pages/12.jpg 1240w, pages/hd/12.jpg 2400w" sizes="(min-width: 960px) 900px, 100vw" alt="팸플릿 12페이지" width="1240" height="1759" loading="lazy" decoding="async">
+  <img class="page" src="pages/13.jpg" srcset="pages/13.jpg 1240w, pages/hd/13.jpg 2400w" sizes="(min-width: 960px) 900px, 100vw" alt="팸플릿 13페이지" width="1240" height="1759" loading="lazy" decoding="async">
+  <img class="page" src="pages/14.jpg" srcset="pages/14.jpg 1240w, pages/hd/14.jpg 2400w" sizes="(min-width: 960px) 900px, 100vw" alt="팸플릿 14페이지" width="1240" height="1759" loading="lazy" decoding="async">
+  <img class="page" src="pages/15.jpg" srcset="pages/15.jpg 1240w, pages/hd/15.jpg 2400w" sizes="(min-width: 960px) 900px, 100vw" alt="팸플릿 15페이지" width="1240" height="1759" loading="lazy" decoding="async">
+  <img class="page" src="pages/16.jpg" srcset="pages/16.jpg 1240w, pages/hd/16.jpg 2400w" sizes="(min-width: 960px) 900px, 100vw" alt="팸플릿 16페이지" width="1240" height="1759" loading="lazy" decoding="async">
+  <img class="page" src="pages/17.jpg" srcset="pages/17.jpg 1240w, pages/hd/17.jpg 2400w" sizes="(min-width: 960px) 900px, 100vw" alt="팸플릿 17페이지" width="1240" height="1759" loading="lazy" decoding="async">
+  <img class="page" src="pages/18.jpg" srcset="pages/18.jpg 1240w, pages/hd/18.jpg 2400w" sizes="(min-width: 960px) 900px, 100vw" alt="팸플릿 18페이지" width="1240" height="1759" loading="lazy" decoding="async">
+  <img class="page" src="pages/19.jpg" srcset="pages/19.jpg 1240w, pages/hd/19.jpg 2400w" sizes="(min-width: 960px) 900px, 100vw" alt="팸플릿 19페이지" width="1240" height="1759" loading="lazy" decoding="async">
+  <img class="page" src="pages/20.jpg" srcset="pages/20.jpg 1240w, pages/hd/20.jpg 2400w" sizes="(min-width: 960px) 900px, 100vw" alt="팸플릿 20페이지" width="1240" height="1759" loading="lazy" decoding="async">
+  <img class="page" src="pages/21.jpg" srcset="pages/21.jpg 1240w, pages/hd/21.jpg 2400w" sizes="(min-width: 960px) 900px, 100vw" alt="팸플릿 21페이지" width="1240" height="1759" loading="lazy" decoding="async">
+  <img class="page" src="pages/22.jpg" srcset="pages/22.jpg 1240w, pages/hd/22.jpg 2400w" sizes="(min-width: 960px) 900px, 100vw" alt="팸플릿 22페이지" width="1240" height="1759" loading="lazy" decoding="async">
+  <img class="page" src="pages/24.jpg" srcset="pages/24.jpg 1240w, pages/hd/24.jpg 2400w" sizes="(min-width: 960px) 900px, 100vw" alt="팸플릿 24페이지" width="1240" height="1759" loading="lazy" decoding="async">
 </main>
 </body>
 </html>
